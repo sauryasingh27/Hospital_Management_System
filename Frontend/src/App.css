@@ -1,0 +1,578 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+   background: linear-gradient(90deg, #f7fafd 0%, #e3f2fd 100%);
+}
+
+p, span, a {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 900;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 900;
+}
+h3 {
+  font-size: 28px;
+  font-weight: 900;
+}
+h4 {
+  font-size: 24px;
+  font-weight: 900;
+}
+h5, h6 {
+  font-size: 24px;
+  font-weight: 700;
+}
+@media (max-width: 1186px) {
+  h1 {
+    font-size: 32px;
+    font-weight: 900;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: 900;
+  }
+}
+
+/* Heading Start */
+.hero-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 3rem;
+  background: linear-gradient(90deg, #f7fafd 0%, #e3f2fd 100%);
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  max-width: 50%;
+  padding: 1rem;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
+.hero-text h2 {
+  font-size: 1.5rem;
+  color: #005a9c;
+}
+
+.hero-image {
+  flex: 1;
+  max-width: 50%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-image {
+    max-width: 100%;
+  }
+}
+/*  Heading End */
+
+/* About Us Start*/
+
+:root {
+  --primary-blue: #007cc3;
+  --light-blue: #e5f3fb;
+  --text-dark: #1a1a1a;
+  --text-light: #555;
+  --bg-white: #ffffff;
+}
+
+.about-us {
+  background-color: var(--bg-white);
+  padding: 60px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-us:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 124, 195, 0.2);
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-container h2 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 20px;
+}
+
+.about-container p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-light);
+  margin-bottom: 15px;
+}
+
+/* About Us End  */
+
+/* Login, Register, sendMsg, Get Appointment Form */
+
+:root {
+  --primary-blue: #007cc3;
+  --light-blue: #e5f3fb;
+  --text-dark: #1a1a1a;
+  --text-light: #555;
+  --bg-white: #ffffff;
+  --input-border: #ccc;
+  --input-focus: #007cc3;
+}
+
+/* Common container */
+.form-component {
+  background-color: var(--bg-white);
+  padding: 40px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 124, 195, 0.15);
+  max-width: 900px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-component h2 {
+  text-align: center;
+  color: var(--primary-blue);
+  font-size: 2rem;
+  margin-bottom: 0;
+}
+
+.form-component p {
+  text-align: center;
+  color: var(--text-light);
+  margin-top: 0;
+}
+
+.form-component form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Two-column input rows */
+.form-component form > div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+
+.form-component input,
+.form-component select,
+.form-component textarea {
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 1px solid var(--input-border);
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease;
+}
+
+.form-component form > div > input,
+.form-component form > div > select {
+  flex: 1 1 48%;
+  min-width: 220px;
+}
+
+.form-component textarea {
+  width: 100%;
+  resize: vertical;
+}
+
+.form-component input:focus,
+.form-component select:focus,
+.form-component textarea:focus {
+  outline: none;
+  border-color: var(--input-focus);
+  box-shadow: 0 0 5px rgba(0, 124, 195, 0.3);
+}
+
+/* Submit button */
+.form-component button {
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: fit-content;
+  align-self: center;
+}
+
+.form-component button:hover {
+  background-color: #005f91;
+}
+
+/* Extra elements in flex row (checkbox and login link) */
+.form-component .extra-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form-component .extra-row p {
+  margin-bottom: 0;
+  color: var(--text-dark);
+}
+
+.form-component .extra-row a {
+  text-decoration: none;
+  color: var(--primary-blue);
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media screen and (max-width: 768px) {
+  .form-component form > div {
+    flex-direction: column;
+  }
+
+  .form-component form > div > input,
+  .form-component form > div > select {
+    flex: 1 1 100%;
+  }
+
+  .form-component button {
+    width: 100%;
+  }
+}
+
+.login-form {
+  max-width: 400px;
+  margin: 0 auto;         
+  width: 100%;         
+}
+
+/* Login Formm End */
+
+
+/* Departments Section Start*/
+.departments-container {
+  padding: 40px 20px;
+  background-color: #f6f9fc;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #002d62; 
+}
+
+.departments-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.department-card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.department-card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.15);
+}
+
+.department-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.department-card h3 {
+  margin: 15px 0;
+  font-size: 1.2rem;
+  color: #002d62;
+}
+
+/* Departments Section End*/
+
+/**********************************************************************************************************************/
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Navbar main container */
+nav {
+  width: 100%;
+  min-height: 50px;
+  background: linear-gradient(90deg, #f7fafd 0%, #e3f2fd 100%);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  overflow: visible; 
+  z-index: 10;
+}
+
+/* Flex wrapper inside navbar */
+.navContainer {
+  width: 100%;
+  max-width: 1300px;
+  height: 100%;
+  padding: 0 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo styles */
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo-img {
+  width: 130px;
+  height: auto;
+}
+
+/* Links section */
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  overflow: visible; 
+}
+
+.links {
+  display: flex;
+  gap: 40px;
+  margin-left: 40px;
+}
+
+.links a {
+  text-decoration: none;
+  color: #222;
+  font-size: 18px;
+  font-weight: 600;
+}
+.links a:hover {
+  color: #000;
+  transition: 0.3s;
+}
+
+/* Button styles */
+.btn {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.loginBtn {
+  background-color: #fca311;
+  color: #1e1e2f;
+}
+.logoutBtn {
+  background-color: #e63946;
+  color: white;
+}
+
+.loginBtn:hover {
+  background-color: #ffb347;
+}
+.logoutBtn:hover {
+  background-color: #d62828;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+nav svg {
+  font-size: 1.75rem;
+}
+
+/* Responsive design */
+@media (max-width: 1100px) {
+  .navLinks {
+    display: none;
+  }
+
+  .navLinks.showmenu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #ffffffef;
+    padding: 20px;
+    overflow-y: visible;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .loginBtn,
+  .logoutBtn {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media (max-width: 650px) {
+  .navLinks.showmenu {
+    width: 100%;
+  }
+}
+
+
+
+/* footer start */
+
+footer.container {
+  background-color: #ffffff;
+  padding: 40px 20px 20px;
+  border-top: 1px solid #ccc;
+  font-family: Arial, sans-serif;
+}
+
+footer hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin-bottom: 30px;
+}
+
+footer .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .contactDiv {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  gap: 50px;
+  
+}
+
+footer .contactDiv div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #555;
+  font-size: 14px;
+}
+
+footer .footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 13px;
+  color: #777;
+}
+
+/* appointment middle */
+
+.footer-btn-wrapper {
+  background-color: var(--bg-white);
+  padding: 60px 20px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.footer-btn-wrapper:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 124, 195, 0.2);
+}
+
+.footer-btn-wrapper h3 {
+  color: var(--primary-blue);
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.footer-btn-wrapper h2 {
+  color: var(--text-dark);
+  font-size: 2rem;
+  margin-bottom: 25px;
+  font-weight: 1000;
+}
+
+.appointment-btn {
+  background-color: var(--primary-blue);
+  color: var(--bg-white);
+  padding: 14px 32px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.appointment-btn:hover {
+  background-color: #005f91;
+}
