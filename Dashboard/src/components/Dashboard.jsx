@@ -15,7 +15,7 @@ const Dashboard = () => {
     const fetchAppointments = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/appointment/getall",
+          "https://hospital-management-system-yb4o.onrender.com/api/v1/appointment/getall",
           { withCredentials: true }
         );
         setAppointments(data.appointments);
@@ -32,7 +32,7 @@ const Dashboard = () => {
   const fetchDoctors = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/doctors",
+        "https://hospital-management-system-yb4o.onrender.com/api/v1/user/doctors",
         { withCredentials: true }
       );
       setDoctorCount(data.doctors.length);
@@ -49,7 +49,7 @@ const Dashboard = () => {
   const handleUpdateStatus = async (appointmentId, status) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/appointment/update/${appointmentId}`,
+        `https://hospital-management-system-yb4o.onrender.com/api/v1/appointment/update/${appointmentId}`,
         { status },
         { withCredentials: true }
       );

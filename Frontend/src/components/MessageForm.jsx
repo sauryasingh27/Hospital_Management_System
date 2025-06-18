@@ -13,7 +13,7 @@ const MessageForm = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        "http://localhost:4000/api/v1/message/send",
+        "https://hospital-management-system-yb4o.onrender.com/api/v1/message/send",
         { firstName, lastName, email, contact, message },
         {
           withCredentials: true,

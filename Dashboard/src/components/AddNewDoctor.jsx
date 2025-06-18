@@ -56,7 +56,7 @@ const AddNewDoctor = () => {
       formData.append("profilePic", profilePic);
 
       await axios
-        .post("http://localhost:4000/api/v1/user/doctor/addnew", formData, {
+        .post("https://hospital-management-system-yb4o.onrender.com/api/v1/user/doctor/addnew", formData, {
           withCredentials: true,
           headers: { "Content-Type": "multipart/form-data" },
         })
